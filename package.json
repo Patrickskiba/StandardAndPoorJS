@@ -15,7 +15,7 @@
       "**/assertion-data/SP500WikiPage.js"
     ]
   },
-  "author": "",
+  "author": "Patrick Skiba",
   "license": "MIT",
   "devDependencies": {
     "jest": "23.6.0",
