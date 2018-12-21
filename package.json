@@ -1,9 +1,10 @@
 {
   "name": "standardandpoorjs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "Returns all stocks in the S&P 500",
+  "main": "src/main.js",
   "scripts": {
+    "start": "node src/main.js",
     "test": "jest"
   },
   "standard": {
@@ -17,12 +18,11 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^23.6.0",
-    "nock": "^10.0.4",
-    "standard": "^12.0.1"
+    "jest": "23.6.0",
+    "nock": "10.0.4",
+    "standard": "12.0.1"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "request-promise-native": "^1.0.5"
+    "cheerio": "1.0.0-rc.2"
   }
 }
