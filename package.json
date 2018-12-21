@@ -5,7 +5,8 @@
   "main": "src/main.js",
   "scripts": {
     "start": "node src/main.js",
-    "test": "jest"
+    "test": "jest",
+    "lint": "standard"
   },
   "standard": {
     "env": [
@@ -15,7 +16,8 @@
       "**/assertion-data/SP500WikiPage.js"
     ]
   },
-  "author": "Patrick Skiba",
+  "homepage": "https://github.com/Patrickskiba/StandardAndPoorJS",
+  "author": "Patrick Skiba <pskiba@posteo.net>",
   "license": "MIT",
   "devDependencies": {
     "jest": "23.6.0",
