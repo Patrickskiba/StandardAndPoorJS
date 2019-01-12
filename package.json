@@ -1,6 +1,6 @@
 {
   "name": "standardandpoorjs",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Returns all stocks in the S&P 500",
   "main": "dist/main.js",
   "types": "dist/main.js",
