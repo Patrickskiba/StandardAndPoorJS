@@ -4,6 +4,9 @@
   "description": "Returns all stocks in the S&P 500",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "nodemon dist/main.js",
