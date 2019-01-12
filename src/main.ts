@@ -16,7 +16,7 @@ const FetchWikiPage = async () => {
 }
 
 const GetPageData = () : Promise<string> => new Promise((resolve, reject) => get(url, response => {
-  let data
+  let data: string
   response.on('data', chunk => (data += chunk))
   response.on('end', () => resolve(data))
   response.on('error', err => reject(err))

@@ -1,9 +1,9 @@
 {
   "name": "standardandpoorjs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Returns all stocks in the S&P 500",
   "main": "dist/main.js",
-  "types": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
     "build": "tsc",
     "start": "nodemon dist/main.js",
