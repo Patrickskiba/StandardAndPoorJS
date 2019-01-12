@@ -1,22 +1,28 @@
-const https = require('https')
-const cheerio = require('cheerio')
+import { load } from 'cheerio'
+import { get } from 'https'
+
+interface Stock {
+  Symbol: string,
+  Name: string,
+  Sector: string
+}
 
 const url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
 
 const FetchWikiPage = async () => {
   const response = await GetPageData()
-  const $ = cheerio.load(response)
+  const $ = load(response)
   return ParseHtmlTable($)
 }
 
-const GetPageData = () => new Promise((resolve, reject) => https.get(url, response => {
+const GetPageData = () : Promise<string> => new Promise((resolve, reject) => get(url, response => {
   let data
   response.on('data', chunk => (data += chunk))
   response.on('end', () => resolve(data))
   response.on('error', err => reject(err))
 }))
 
-const ParseHtmlTable = $ => {
+const ParseHtmlTable = ($: CheerioStatic) : Stock[] => {
   return $('.wikitable')
     .map((i, table) => {
       if (i === 0) {
@@ -34,4 +40,4 @@ const ParseHtmlTable = $ => {
     }).get()
 }
 
-module.exports = { FetchWikiPage }
+export { FetchWikiPage }

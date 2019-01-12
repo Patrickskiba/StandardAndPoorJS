@@ -1,5 +1,5 @@
 const nock = require('nock')
-const { FetchWikiPage } = require('../src/main')
+const { FetchWikiPage } = require('../dist/main')
 const { mockedPageData } = require('./mock-data/SP500WikiPage')
 
 describe('main tests', async () => {

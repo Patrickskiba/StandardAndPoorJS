@@ -2,9 +2,12 @@
   "name": "standardandpoorjs",
   "version": "1.0.2",
   "description": "Returns all stocks in the S&P 500",
-  "main": "src/main.js",
+  "main": "dist/main.js",
+  "types": "dist/main.js",
   "scripts": {
-    "start": "node src/main.js",
+    "build": "tsc",
+    "start": "nodemon dist/main.js",
+    "start:dev": "ts-node src/main.ts",
     "test": "jest",
     "lint": "standard"
   },
@@ -20,9 +23,14 @@
   "author": "Patrick Skiba <pskiba@posteo.net>",
   "license": "MIT",
   "devDependencies": {
+    "@types/cheerio": "0.22.10",
+    "@types/node": "10.12.18",
     "jest": "23.6.0",
     "nock": "10.0.4",
-    "standard": "12.0.1"
+    "nodemon": "1.18.9",
+    "standard": "12.0.1",
+    "ts-node": "7.0.1",
+    "typescript": "3.2.2"
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.2"
