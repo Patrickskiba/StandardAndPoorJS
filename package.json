@@ -11,7 +11,7 @@
     "build": "tsc",
     "start": "nodemon dist/main.js",
     "start:dev": "ts-node src/main.ts",
-    "test": "jest",
+    "test": "tsc && jest",
     "lint": "standard"
   },
   "standard": {
